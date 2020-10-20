@@ -3,7 +3,7 @@ set -e
 
 make -j6 -f examples/Makefile-nrf52840 clean
 ./bootstrap
-make -f examples/Makefile-nrf52840 DISABLE_BUILTIN_MBEDTLS=1 COAP=1 DNS_CLIENT=1 DISABLE_SPI=1 EXTERNAL_HEAP=1
+make -f examples/Makefile-nrf52840 COAP=1 DNS_CLIENT=1 DISABLE_SPI=1 EXTERNAL_HEAP=1
 
 REF=$(git rev-parse HEAD | cut -c -8)
 
